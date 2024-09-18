@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./MainPage.css";
+
 import {register} from 'swiper/element/bundle';
 
 register();
@@ -11,7 +11,13 @@ import 'swiper/css/scrollbar';
 import { EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/effect-fade';
-import UserComment from './UserComment';
+import UserComment from '../../Components/User/UserComment';
+
+import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
+import "./MainPage.css";
+
+
 
 
 const MainPage = () => {
@@ -47,22 +53,9 @@ const MainPage = () => {
 
 return(
 <>
-      <header>
-       <div className="logo"></div>
-        <nav className="menu">
-          <button id="btnPsicologos" className="vizualizar"> Nossos Psicológos </button>
-          <button id="btnProfissionais" className="vizualizar"> Colaboradores </button>
-          <button id="btnSobre" className="vizualizar"> Sobre nós </button>
-        </nav>
+     <Header />
 
-        <div className="acessos">
-        <button id="btnLogin" className="acesso"> Login </button>
-          <button id="btnCadastro" className="acesso"> Cadastra-se </button>
-        </div>
-        </header>
-
-
-        <Swiper 
+     <Swiper 
           effect="fade"
           modules={[EffectFade]}
           pagination={{clickable:true}}
@@ -104,18 +97,8 @@ return(
           ))}
         </div>
       </article>
-      <footer>
-        <nav className="menufooter">
-          <button id="btnPsicologos" className="vizualizar"> Nossos Psicológos </button>
-          <button id="btnProfissionais" className="vizualizar"> Colaboradores </button>
-          <button id="btnSobre" className="vizualizar"> Sobre nós </button>
-        </nav>
-        <div className="infos">
-          <div className="logo"></div>
-          <p>Psicológo responsável: Dr. Fulano Souza (CRM: 1234567890)</p>
-          <p>Plataforma desenvolvida por: Clara dos Santos Becker, Lucas Gabriel Falcade Nunes e Luiz Albert</p>
-        </div>
-      </footer>
+
+     <Footer />
 
     </>
 
@@ -125,3 +108,4 @@ return(
 }
 
 export default MainPage
+
