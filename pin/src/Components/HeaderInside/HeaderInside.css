@@ -19,11 +19,11 @@ header{
 
 
 .acessos input {
-    width: 700px; /* Define o input para ocupar toda a largura do contêiner */
-    max-width: 700px; /* Define um limite máximo, se necessário */
-    padding: 10px; /* Aumenta o espaçamento interno */
+    width: 700px;
+    max-width: 700px; 
+    padding: 10px; 
     border-radius: 10px;
-    font-size: 16px; /* Aumenta o tamanho da fonte */
+    font-size: 16px; 
 }
 
 
@@ -35,6 +35,6 @@ header{
 
 
 .acessos {
-    flex-direction: row;/* Organiza o campo de busca e o botão verticalmente */
+    flex-direction: row;
    
 }
